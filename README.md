@@ -43,6 +43,10 @@ print
 ```
 flag is AIS3{A X OR B  XOR  A E QUAL S B}
 
+# reverse1
+> 使用Immunity Debugger， 找到程式有printf但又fflush
+> 於是下好斷點，慢慢地取得所有flag
+
 # pwn1
 > 打開ida，看完程式碼
 > 大概了解pwn1.bin會將讀入資料當作function去執行
