@@ -1,0 +1,15 @@
+import base64
+
+cipherText = """01010001011010110100101001000010010101000101010100111001010100000101010000110000010110010110101001010111010010000111010001101010011000110100011001001001011101000101011101011000001100000111010101010110010001000100000100111101"""
+
+text = []
+for i in range(0, len(cipherText), 8):
+    text += chr(int("0b"+cipherText[i:i+8], base=2))
+
+text = "".join(text)
+text = base64.b64decode(text)
+
+plainText = ""
+for i in range(0, len(text), 4):
+    plainText += text[i+1:i+4] + text[i]
+print plainText
